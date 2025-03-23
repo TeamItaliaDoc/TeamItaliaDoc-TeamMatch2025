@@ -1,0 +1,558 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8"> 
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<script type="text/javascript" src="js/jquery-2.0.3.js"> </script>
+
+
+<!--
+<script>
+    document.write('<script type="text/javascript"  src="js/TeamMatch.js?dev=' + Math.floor(Math.random() * 100) + '"\><\/script>');
+    document.write('<script type="text/javascript"  src="js/giocatori.js?dev=' + Math.floor(Math.random() * 100) + '"\><\/script>');
+    document.write('<script type="text/javascript"  src="js/1WL.js?dev=' + Math.floor(Math.random() * 100) + '"\><\/script>');
+    document.write('<script type="text/javascript"  src="js/leghe.js?dev=' + Math.floor(Math.random() * 100) + '"\><\/script>');
+    document.write('<link rel="stylesheet" href="css/TID.css?dev=' + Math.floor(Math.random() * 100) + '"\><\/script>');
+</script>
+-->
+<script>
+    document.write('<script type="text/javascript"  src="js/TeamMatch.js"\><\/script>');
+    document.write('<script type="text/javascript"  src="js/giocatori.js"\><\/script>');
+    document.write('<script type="text/javascript"  src="js/leghe.js"\><\/script>');
+    document.write('<link rel="stylesheet" href="css/TID.css"\><\/script>');
+</script>
+
+</head>
+
+<!-- rilancio la pagina con un parametro per farla caricare se cambiata -->
+<script>
+    var query = window.location.search.substring(1);
+    if (!query)
+      window.location = 'index.html?dev=' + Math.floor(Math.random() * 100);
+    if (query == 'admin')
+    {
+        CAMPIONATO.isAdmin = true;
+    }   
+</script>
+    
+<body>
+    
+<!--                            INTESTAZIONE                                        -->   
+<main align=”center” class="frame-principale"> 
+<div class="intestazione-img">
+    <a href="https://www.chess.com/club/team-italia-doc"  target=”_blank”> <img height="125" width="125" src="img/TID.jpeg"></a>
+</div>
+<div>
+    <h1 class="intestazione-titolo">Team Match</h1>
+    <br>
+    <h1 class="intestazione-piede">Stagione 2025</h1>
+    <HR>
+</div>
+
+<!--                            Menu                                        -->   
+<spam class="menu" >
+    <select  onchange="window.location=this.options[this.selectedIndex].value">
+        <option value="">Terminati...</option>
+        <option value="https://teamitaliadoc.github.io/campionatoSquadre2021">Campionato a squadre 2021-22</option>    
+        <option value="https://teamitaliadoc.github.io/TrofeoPrimavera">Trofeo di Primavera</option>    
+        <option value="https://teamitaliadoc.github.io/CampionatoSocialeCategoria2020">Campionato categoria 2019</option>   
+        <option value="https://teamitaliadoc.github.io/battagliaFinale">Battaglia finale 2019</option>   
+        <option value="https://teamitaliadoc.github.io/Calvario2019">Calvario 2019</option>   
+        <option value="https://teamitaliadoc.github.io/campionatoSquadre2019/index.html">Campionato a squadre 2019</option>    
+        <option value="https://teamitaliadoc.github.io/Carosello2019/index.html">Carosello 2019</option>   
+        <option value="https://teamitaliadoc.github.io/campionatoSociale2019I/index.html">Campionato sociale 2019</option>    
+        <option value="https://teamitaliadoc.github.io/campionatoSociale2018/index.html">Campionato sociale 2018</option>    
+
+    </select>
+    </spam>
+    <spam class="menu" >
+    </spam>
+    <spam class="menu" >
+        <select  onchange="window.location=this.options[this.selectedIndex].value">
+            <option value="">Stagioni passate...</option>
+            <option value="https://teamitaliadoc.github.io/TeamMatch2023">Stagione 2023</option>    
+            <option value="https://teamitaliadoc.github.io/TeamMatch2022">Stagione 2022</option>    
+        </select>
+    </spam>
+    <spam class="menu" >
+        <a  class="menu" href="https://teamitaliadoc.github.io/hallOfFame/index.html?d">Hall of fame </a>
+     </spam>
+     <spam class="menu" >
+        <select  onchange="window.location=this.options[this.selectedIndex].value">
+            <option value="">Video...</option>
+            <option value="https://youtu.be/xCvnI2K0VN8">Inno</option>    
+            <option value="https://www.youtube.com/watch?v=9rjMwIiODsw">Compleanno 2019</option>    
+          </select>
+        </spam>
+        <HR>     
+
+
+<!--                            SEPARATORE                                      -->   
+<table align="left" width="950px" height="80px">
+<tr> <td><h1 class="intestazione-gironi">Team Match  </h1></td> </tr>
+<tr> <td><h1 class="intestazione-help">In questa pagina sono elencati tutti i Team Match della stagione 2025</h1>
+    <h1 class="intestazione-help">I risultati dei Match sono in tempo reale mentre le classifiche vengono aggiornate quando sono rese disponibili dal direttore del torneo    </h1>
+    <h1 class="intestazione-help">La classifica dei giocatori è valida per l'assegnazione dei migliori giocatori del Team per il 2025  </h1></td></tr>
+</table>
+
+<!--                            1WL 2025: Together for Global Peace                                      -->   
+<table align="left" width="950px">
+    <tr> <td><h1 class="intestazione-gironi">1WL 2025 Together for Global Peace    </h1></td> </tr>
+<tr> <td><h1 class="intestazione-help">Descrizione</h1>
+    </td></tr>        
+</table>
+<table  id="1WL-PEACE" class="classifica-giocatori">
+    <tr class="classifica-intestazione">
+        <td class="classifica-col1">Turno</td>  
+        <td class="giocatori-col1SEP">  </td>
+        <td class="classifica-lega-2">Data</td> 
+        <td class="classifica-lega-3">Avversario</td>  
+        <td class="classifica-lega-4">Giocatori</td>
+        <td class="classifica-lega-4">Punteggio</td>
+        <td class="classifica-lega-4">Risultato</td>
+        <td class="classifica-col1">Link</td>
+        </td>
+    </tr>
+</table>
+
+<!--                            1WL 2025 European Qualifiers 15+                                     -->   
+<table align="left" width="950px">
+    <tr> <td> <h1 class="intestazione-gironi">1WL 2025 European Qualifiers 15+    </h1> 
+    <h1 class="intestazione-help">Descrizione</h1>
+    </td></tr></table>
+<table  id="1WL-EUROPEAN" class="classifica-giocatori">
+    <tr class="classifica-intestazione">
+        <td class="classifica-col1">Turno</td>  
+        <td class="giocatori-col1SEP">  </td>
+        <td class="classifica-lega-2">Data</td> 
+        <td class="classifica-lega-3">Avversario</td>  
+        <td class="classifica-lega-4">Giocatori</td>
+        <td class="classifica-lega-4">Punteggio</td>
+        <td class="classifica-lega-4">Risultato</td>
+        <td class="classifica-col1">Link</td>
+    </tr>
+</table>
+
+<!--                            1WL 2025 Classic OPEN                                     -->   
+<table align="left" width="950px">
+    <tr> <td> <h1 class="intestazione-gironi">1WL 2025 Classic OPEN    </h1> 
+    <h1 class="intestazione-help">Descrizione</h1>
+    </td></tr></table>
+<table  id="1WL-OPEN" class="classifica-giocatori">
+    <tr class="classifica-intestazione">
+        <td class="classifica-col1">Turno</td>  
+        <td class="giocatori-col1SEP">  </td>
+        <td class="classifica-lega-2">Data</td> 
+        <td class="classifica-lega-3">Avversario</td>  
+        <td class="classifica-lega-4">Giocatori</td>
+        <td class="classifica-lega-4">Punteggio</td>
+        <td class="classifica-lega-4">Risultato</td>
+        <td class="classifica-col1">Link</td>
+    </tr>
+</table>
+
+
+<!--                            1WL - Classic Championship U1700                                      -->   
+<table align="left" width="950px">
+    <tr> <td><h1 class="intestazione-gironi">1WL 2025 Classic  U1700 </h1></td> </tr>
+<tr> <td><h1 class="intestazione-help">Classic CUP è un torneo organizzato da 1 World League riservato agli Under 1700. </h1>
+    </td></tr>        
+</table>
+<table  id="1WL-CLA1700" class="classifica-giocatori">
+    <tr class="classifica-intestazione">
+        <td class="classifica-col1">Turno</td>  
+        <td class="giocatori-col1SEP">  </td>
+        <td class="classifica-lega-2">Data</td> 
+        <td class="classifica-lega-3">Avversario</td>  
+        <td class="classifica-lega-4">Giocatori</td>
+        <td class="classifica-lega-4">Punteggio</td>
+        <td class="classifica-lega-4">Risultato</td>
+        <td class="classifica-col1">Link</td>
+        </td>
+    </tr>
+</table>
+
+<!--                            1WL - Classic Championship U1300                                      -->   
+<table align="left" width="950px">
+    <tr> <td><h1 class="intestazione-gironi">1WL 2025 Classic  U1300 </h1></td> </tr>
+<tr> <td><h1 class="intestazione-help">Classic CUP è un torneo organizzato da 1 World League riservato agli Under 1300. </h1>
+    </td></tr>        
+</table>
+<table  id="1WL-CLA1300" class="classifica-giocatori">
+    <tr class="classifica-intestazione">
+        <td class="classifica-col1">Turno</td>  
+        <td class="giocatori-col1SEP">  </td>
+        <td class="classifica-lega-2">Data</td> 
+        <td class="classifica-lega-3">Avversario</td>  
+        <td class="classifica-lega-4">Giocatori</td>
+        <td class="classifica-lega-4">Punteggio</td>
+        <td class="classifica-lega-4">Risultato</td>
+        <td class="classifica-col1">Link</td>
+        </td>
+    </tr>
+</table>
+
+<!--                            1WL 2025 1500-1700 Season Premiere Cand.                                     -->   
+<table align="left" width="950px">
+    <tr> <td> <h1 class="intestazione-gironi">1WL 2025 1500-1700 Season Premiere Cand.    </h1> 
+    <h1 class="intestazione-help">Descrizione</h1>
+    </td></tr></table>
+<table  id="1WL-15-17" class="classifica-giocatori">
+    <tr class="classifica-intestazione">
+        <td class="classifica-col1">Turno</td>  
+        <td class="giocatori-col1SEP">  </td>
+        <td class="classifica-lega-2">Data</td> 
+        <td class="classifica-lega-3">Avversario</td>  
+        <td class="classifica-lega-4">Giocatori</td>
+        <td class="classifica-lega-4">Punteggio</td>
+        <td class="classifica-lega-4">Risultato</td>
+        <td class="classifica-col1">Link</td>
+    </tr>
+</table>
+
+<!--                            1WL 2025 1500-1700 Season Premiere Cand.                                    -->   
+<table align="left" width="950px">
+    <tr> <td> <h1 class="intestazione-gironi">1WL 2025 1300-1500 Season Premiere Cand.    </h1> 
+    <h1 class="intestazione-help">Descrizione</h1>
+    </td></tr></table>
+<table  id="1WL-13-15" class="classifica-giocatori">
+    <tr class="classifica-intestazione">
+        <td class="classifica-col1">Turno</td>  
+        <td class="giocatori-col1SEP">  </td>
+        <td class="classifica-lega-2">Data</td> 
+        <td class="classifica-lega-3">Avversario</td>  
+        <td class="classifica-lega-4">Giocatori</td>
+        <td class="classifica-lega-4">Punteggio</td>
+        <td class="classifica-lega-4">Risultato</td>
+        <td class="classifica-col1">Link</td>
+    </tr>
+</table>
+
+<!--                            1WL 2025 1100-1300 Season Premiere Cand.                                     -->   
+<table align="left" width="950px">
+    <tr> <td> <h1 class="intestazione-gironi">1WL 2025 1100-1300 Season Premiere Cand.    </h1> 
+    <h1 class="intestazione-help">Descrizione</h1>
+    </td></tr></table>
+<table  id="1WL-11-13" class="classifica-giocatori">
+    <tr class="classifica-intestazione">
+        <td class="classifica-col1">Turno</td>  
+        <td class="giocatori-col1SEP">  </td>
+        <td class="classifica-lega-2">Data</td> 
+        <td class="classifica-lega-3">Avversario</td>  
+        <td class="classifica-lega-4">Giocatori</td>
+        <td class="classifica-lega-4">Punteggio</td>
+        <td class="classifica-lega-4">Risultato</td>
+        <td class="classifica-col1">Link</td>
+    </tr>
+</table>
+
+<!--                            1WL 2025 U1000 Season Premiere Cand.                                     -->   
+<table align="left" width="950px">
+    <tr> <td> <h1 class="intestazione-gironi">1WL 2025 U1000 Season Premiere Cand.    </h1> 
+    <h1 class="intestazione-help">Descrizione</h1>
+    </td></tr></table>
+<table  id="1WL-1000" class="classifica-giocatori">
+    <tr class="classifica-intestazione">
+        <td class="classifica-col1">Turno</td>  
+        <td class="giocatori-col1SEP">  </td>
+        <td class="classifica-lega-2">Data</td> 
+        <td class="classifica-lega-3">Avversario</td>  
+        <td class="classifica-lega-4">Giocatori</td>
+        <td class="classifica-lega-4">Punteggio</td>
+        <td class="classifica-lega-4">Risultato</td>
+        <td class="classifica-col1">Link</td>
+    </tr>
+</table>
+
+<!--                            1WL - 1800                                      -->    
+<table align="left" width="950px">
+    <tr> <td> <h1 class="intestazione-gironi">1WL 2025 U1800 10 </h1> 
+    <h1 class="intestazione-help">Sistema svizzero su 9 turni. Categora U1800.</h1>
+    </td></tr></table>
+<table  id="1WL-1800" class="classifica-giocatori">
+    <tr class="classifica-intestazione">
+        <td class="classifica-col1">Turno</td> 
+        <td class="giocatori-col1SEP">  </td>
+        <td class="classifica-lega-2">Data</td> 
+        <td class="classifica-lega-3">Avversario</td>
+        <td class="classifica-lega-4">Giocatori</td>
+        <td class="classifica-lega-4">Punteggio</td>
+        <td class="classifica-lega-4">Risultato</td>
+        <td class="classifica-col1">Link</td>
+    </tr>
+
+</table>
+
+<!--                            1WL - 1600                                      -->   
+<table align="left" width="950px">
+    <tr> <td> <h1 class="intestazione-gironi">1WL 2025 U1600 10 </h1> 
+    <h1 class="intestazione-help">Sistema svizzero su 9 turni. Categora U1600.</h1>
+    </td></tr></table>
+<table  id="1WL-1600" class="classifica-giocatori">
+    <tr class="classifica-intestazione">
+        <td class="classifica-col1">Turno</td>  
+        <td class="giocatori-col1SEP">  </td>
+        <td class="classifica-lega-2">Data</td> 
+        <td class="classifica-lega-3">Avversario</td> 
+        <td class="classifica-lega-4">Giocatori</td>
+        <td class="classifica-lega-4">Punteggio</td>
+        <td class="classifica-lega-4">Risultato</td>
+        <td class="classifica-col1">Link</td>
+    </tr>
+</table>
+
+<!--                            1WL - 1400                                      -->   
+<table align="left" width="950px">
+    <tr> <td> <h1 class="intestazione-gironi">1WL 2025 U1400 20 </h1> 
+    <h1 class="intestazione-help">Sistema svizzero su 9 turni. Categora U1400.</h1>
+    </td></tr></table>
+<table  id="1WL-1400" class="classifica-giocatori">
+    <tr class="classifica-intestazione">
+        <td class="classifica-col1">Turno</td>  
+        <td class="giocatori-col1SEP">  </td>
+        <td class="classifica-lega-2">Data</td> 
+        <td class="classifica-lega-3">Avversario</td>  
+        <td class="classifica-lega-4">Giocatori</td>
+        <td class="classifica-lega-4">Punteggio</td>
+        <td class="classifica-lega-4">Risultato</td>
+        <td class="classifica-col1">Link</td>
+    </tr>
+</table>
+
+<!--                            1WL - 1200                                      -->   
+<table align="left" width="950px">
+    <tr> <td> <h1 class="intestazione-gironi">1WL 2025 U1200 8+ </h1> 
+    <h1 class="intestazione-help">Sistema svizzero. Categora UìU1200.</h1>
+    </td></tr></table>
+<table  id="1WL-1200" class="classifica-giocatori">
+    <tr class="classifica-intestazione">
+        <td class="classifica-col1">Turno</td> 
+        <td class="giocatori-col1SEP">  </td>
+        <td class="classifica-lega-2">Data</td> 
+        <td class="classifica-lega-3">Avversario</td>  
+        <td class="classifica-lega-4">Giocatori</td>
+        <td class="classifica-lega-4">Punteggio</td>
+        <td class="classifica-lega-4">Risultato</td>
+        <td class="classifica-col1">Link</td>
+    </tr>
+</table>
+
+<!--                            1WL 2025 Eight4Us Winter Candidates                                  -->   
+<table align="left" width="950px">
+    <tr> <td><h1 class="intestazione-gironi">1WL 2025 Eight4Us Winter Candidates    </h1>
+    <h1 class="intestazione-help">Descrizione</h1>
+    </td></tr>        
+</table>
+<table  id="1WL-US-W" class="classifica-giocatori">
+    <tr class="classifica-intestazione">
+        <td class="classifica-col1">Turno</td> 
+        <td class="giocatori-col1SEP">  </td>
+        <td class="classifica-lega-2">Data</td> 
+        <td class="classifica-lega-3">Avversario</td>  
+        <td class="classifica-lega-4">Giocatori</td>
+        <td class="classifica-lega-4">Punteggio</td>
+        <td class="classifica-lega-4">Risultato</td>
+        <td class="classifica-col1">Link</td>
+        </td>
+    </tr>
+</table>
+
+<!--                            1WL 2025 1400-1600 Winter Candidates                                  -->   
+<table align="left" width="950px">
+    <tr> <td><h1 class="intestazione-gironi">1WL 2025 1400-1600 Winter Candidates    </h1>
+    <h1 class="intestazione-help">Descrizione</h1>
+    </td></tr>        
+</table>
+<table  id="1WL-1600-W" class="classifica-giocatori">
+    <tr class="classifica-intestazione">
+        <td class="classifica-col1">Turno</td> 
+        <td class="giocatori-col1SEP">  </td>
+        <td class="classifica-lega-2">Data</td> 
+        <td class="classifica-lega-3">Avversario</td>  
+        <td class="classifica-lega-4">Giocatori</td>
+        <td class="classifica-lega-4">Punteggio</td>
+        <td class="classifica-lega-4">Risultato</td>
+        <td class="classifica-col1">Link</td>
+        </td>
+    </tr>
+</table>
+
+<!--                            1WL 2025 1200-1400 Winter Masters                               -->   
+<table align="left" width="950px">
+    <tr> <td><h1 class="intestazione-gironi">1WL 2025 1200-1400 Winter Masters    </h1>
+    <h1 class="intestazione-help">Descrizione</h1>
+    </td></tr>        
+</table>
+<table  id="1WL-1200-W" class="classifica-giocatori">
+    <tr class="classifica-intestazione">
+        <td class="classifica-col1">Turno</td> 
+        <td class="giocatori-col1SEP">  </td>
+        <td class="classifica-lega-2">Data</td> 
+        <td class="classifica-lega-3">Avversario</td>  
+        <td class="classifica-lega-4">Giocatori</td>
+        <td class="classifica-lega-4">Punteggio</td>
+        <td class="classifica-lega-4">Risultato</td>
+        <td class="classifica-col1">Link</td>
+        </td>
+    </tr>
+</table>
+
+<!--                            1WL 2025 960 OPEN 8+                               -->   
+<table align="left" width="950px">
+    <tr> <td><h1 class="intestazione-gironi">1WL 2025 960 OPEN 8+    </h1>
+    <h1 class="intestazione-help">Descrizione</h1>
+    </td></tr>        
+</table>
+<table  id="1WL-960" class="classifica-giocatori">
+    <tr class="classifica-intestazione">
+        <td class="classifica-col1">Turno</td> 
+        <td class="giocatori-col1SEP">  </td>
+        <td class="classifica-lega-2">Data</td> 
+        <td class="classifica-lega-3">Avversario</td>  
+        <td class="classifica-lega-4">Giocatori</td>
+        <td class="classifica-lega-4">Punteggio</td>
+        <td class="classifica-lega-4">Risultato</td>
+        <td class="classifica-col1">Link</td>
+        </td>
+    </tr>
+</table>
+
+<!--                            1WL 2025 960 U1400 4+                               -->   
+<table align="left" width="950px">
+    <tr> <td><h1 class="intestazione-gironi">1WL 2025 960 U1400 4+    </h1>
+    <h1 class="intestazione-help">Descrizione</h1>
+    </td></tr>        
+</table>
+<table  id="1WL-960-1400" class="classifica-giocatori">
+    <tr class="classifica-intestazione">
+        <td class="classifica-col1">Turno</td> 
+        <td class="giocatori-col1SEP">  </td>
+        <td class="classifica-lega-2">Data</td> 
+        <td class="classifica-lega-3">Avversario</td>  
+        <td class="classifica-lega-4">Giocatori</td>
+        <td class="classifica-lega-4">Punteggio</td>
+        <td class="classifica-lega-4">Risultato</td>
+        <td class="classifica-col1">Link</td>
+        </td>
+    </tr>
+</table>
+
+<!--                            1WL 2025 960 U1400 Winter Candidates                             -->   
+<table align="left" width="950px">
+    <tr> <td><h1 class="intestazione-gironi">1WL 2025 960 U1400 Winter Candidates    </h1>
+    <h1 class="intestazione-help">Descrizione</h1>
+    </td></tr>        
+</table>
+<table  id="1WL-960-1400-W" class="classifica-giocatori">
+    <tr class="classifica-intestazione">
+        <td class="classifica-col1">Turno</td> 
+        <td class="giocatori-col1SEP">  </td>
+        <td class="classifica-lega-2">Data</td> 
+        <td class="classifica-lega-3">Avversario</td>  
+        <td class="classifica-lega-4">Giocatori</td>
+        <td class="classifica-lega-4">Punteggio</td>
+        <td class="classifica-lega-4">Risultato</td>
+        <td class="classifica-col1">Link</td>
+        </td>
+    </tr>
+</table>
+
+
+<!--                            TMCL                                      -->   
+<table align="left" width="950px">
+    <tr> <td><h1 class="intestazione-gironi">Team Match Championship League </h1></td> </tr>
+    </td></tr>        
+</table>
+<table  id="TMCL" class="classifica-giocatori">
+    <tr class="classifica-intestazione">
+        <td class="classifica-col1">Turno</td>  
+        <td class="giocatori-col1SEP">  </td>
+        <td class="classifica-lega-2">Data</td> 
+        <td class="classifica-lega-3">Avversario</td> 
+        <td class="classifica-lega-4">Giocatori</td>
+        <td class="classifica-lega-4">Punteggio</td>
+        <td class="classifica-lega-4">Risultato</td>
+        <td class="classifica-col1">Link</td>
+        </td>
+    </tr>
+</table>
+
+
+<!--                            Amichevoli                                      -->   
+<table align="left" width="950px">
+    <tr> <td><h1 class="intestazione-gironi">Amichevoli</h1></td> </tr>
+<tr> <td><h1 class="intestazione-help">Questo è l'elenco delle amichevoli giocate nel 2025. </h1>
+    </td></tr>        
+</table>
+<table  id="AMICI" class="classifica-giocatori">
+    <tr class="classifica-intestazione">
+        <td class="classifica-col1">Turno</td>  
+        <td class="giocatori-col1SEP">  </td>
+        <td class="classifica-lega-2">Data</td> 
+        <td class="classifica-lega-3">Avversario</td>  
+        <td class="classifica-lega-4">Giocatori</td>
+        <td class="classifica-lega-4">Punteggio</td>
+        <td class="classifica-lega-4">Risultato</td>
+        <td class="classifica-col1">Link</td>
+        </td>
+    </tr>
+</table>
+
+
+<!--                            CLASSIFICA                                      -->   
+<div>
+<table  id="classifica" class="classifica-tabella">
+    <tr class="classifica-intestazione">
+    </tr>
+    
+</table>
+
+</div>
+
+
+    
+<!--                            SEPARATORE                                      -->   
+<table align="left" width="960px" height="100px">
+    <tr> </tr>
+    <tr> </tr>
+<tr> <td><h1 class="intestazione-gironi">Migliori giocatori</h1></td> </tr>
+</table>
+<!--                            Giocatori                                      -->   
+<table  id="giocatori" class="classifica-giocatori">
+    <tr class="classifica-intestazione">
+        <td class="classifica-col1"></td> <!-- posizione -->
+        <td class="giocatori-col1SEP">  </td>
+        <td class="classifica-col2">Giocatore</td> 
+         <td class="classifica-col2">Punti</td>
+        <td class="classifica-col2">Risultati</td>
+    </tr>
+
+</table>
+
+         
+
+<!--                            IMMAGINE  -  LOGO   -->
+    <table  width="950px" height="50px" class="Powered">
+    <tr>
+        <td></td> 
+    </tr>
+</table>
+
+<table  width="950px"   class="Powered">
+
+    <tr>
+            <td align="left" width="950px">Realizzato da Sandro2116 &  francescomine</td> 
+        </tr>
+    </table> 
+
+
+
+    <script type="text/javascript"> 
+        elabora();
+    </script>
+</main>
+
+</html>
+
