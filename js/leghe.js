@@ -193,7 +193,7 @@ matchs['1WL-960-1400-W-7'] = {"id":"", "lega":"1WL-960-1400-W", "giornata":1, "d
 matchs['TMCL-1'] = {"id":"1717865", "lega":"TMCL", "giornata":1, "data":"01/01/2025", "daCaricare" : true};
 matchs['TMCL-2'] = {"id":"1730475", "lega":"TMCL", "giornata":2, "data":"01/02/2025", "daCaricare" : true};
 matchs['TMCL-3'] = {"id":"1745321", "lega":"TMCL", "giornata":3, "data":"01/03/2025", "daCaricare" : true};
-matchs['TMCL-4'] = {"id":"", "lega":"TMCL", "giornata":4, "data":"", "daCaricare" : true};  
+matchs['TMCL-4'] = {"id":"1759923", "lega":"TMCL", "giornata":4, "data":"01/04/2025", "daCaricare" : true};  
 matchs['TMCL-5'] = {"id":"", "lega":"TMCL", "giornata":5, "data":"", "daCaricare" : true};
 matchs['TMCL-6'] = {"id":"", "lega":"TMCL", "giornata":6, "data":"", "daCaricare" : true};
 matchs['TMCL-7'] = {"id":"", "lega":"TMCL", "giornata":7, "data":"", "daCaricare" : true};
@@ -202,6 +202,21 @@ matchs['TMCL-9'] = {"id":"", "lega":"TMCL", "giornata":9, "data":"", "daCaricare
 
 //1WL 2025 Club Cup 25
 matchs['CLUB-CUP-1'] = {"id":"1750015", "lega":"CLUB-CUP", "giornata":1, "data":"30/03/2025", "daCaricare" : true};
+matchs['CLUB-CUP-2'] = {"id":"", "lega":"CLUB-CUP", "giornata":1, "data":"", "daCaricare" : true};
+matchs['CLUB-CUP-3'] = {"id":"", "lega":"CLUB-CUP", "giornata":1, "data":"", "daCaricare" : true};
+matchs['CLUB-CUP-4'] = {"id":"", "lega":"CLUB-CUP", "giornata":1, "data":"", "daCaricare" : true};
+matchs['CLUB-CUP-5'] = {"id":"", "lega":"CLUB-CUP", "giornata":1, "data":"", "daCaricare" : true};
+matchs['CLUB-CUP-6'] = {"id":"", "lega":"CLUB-CUP", "giornata":1, "data":"", "daCaricare" : true};
+matchs['CLUB-CUP-7'] = {"id":"", "lega":"CLUB-CUP", "giornata":1, "data":"", "daCaricare" : true};
+
+//1WL 2025 Eight4Us Spring Experts
+matchs['84Us-Spring-1'] = {"id":"1756935", "lega":"84Us-Spring", "giornata":1, "data":"30/03/2025", "daCaricare" : true};
+matchs['84Us-Spring-2'] = {"id":"1756187", "lega":"84Us-Spring", "giornata":1, "data":"30/03/2025", "daCaricare" : true};
+matchs['84Us-Spring-3'] = {"id":"1756205", "lega":"84Us-Spring", "giornata":1, "data":"30/03/2025", "daCaricare" : true};
+matchs['84Us-Spring-4'] = {"id":"1756201", "lega":"84Us-Spring", "giornata":1, "data":"30/03/2025", "daCaricare" : true};
+matchs['84Us-Spring-5'] = {"id":"1756193", "lega":"84Us-Spring", "giornata":1, "data":"30/03/2025", "daCaricare" : true};
+matchs['84Us-Spring-6'] = {"id":"", "lega":"84Us-Spring", "giornata":1, "data":"", "daCaricare" : true};
+
 
 //Amichevoli 
 matchs['AMICI-1'] = {"id":"", "lega":"AMICI", "giornata":1, "data":"", "daCaricare" : true};
