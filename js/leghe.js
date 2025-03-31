@@ -201,7 +201,7 @@ matchs['TMCL-8'] = {"id":"", "lega":"TMCL", "giornata":8, "data":"", "daCaricare
 matchs['TMCL-9'] = {"id":"", "lega":"TMCL", "giornata":9, "data":"", "daCaricare" : true};
 
 //1WL 2025 Club Cup 25
-matchs['CLUB-CUP-1'] = {"id":"", "lega":"CLUB-CUP", "giornata":1, "data":"", "daCaricare" : true};
+matchs['CLUB-CUP-1'] = {"id":"1750015", "lega":"CLUB-CUP", "giornata":1, "data":"30/03/2025", "daCaricare" : true};
 
 //Amichevoli 
 matchs['AMICI-1'] = {"id":"", "lega":"AMICI", "giornata":1, "data":"", "daCaricare" : true};
