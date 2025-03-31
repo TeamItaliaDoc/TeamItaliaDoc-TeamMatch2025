@@ -192,7 +192,7 @@ matchs['1WL-960-1400-W-7'] = {"id":"", "lega":"1WL-960-1400-W", "giornata":1, "d
 //TMCL
 matchs['TMCL-1'] = {"id":"1717865", "lega":"TMCL", "giornata":1, "data":"01/01/2025", "daCaricare" : true};
 matchs['TMCL-2'] = {"id":"1730475", "lega":"TMCL", "giornata":2, "data":"01/02/2025", "daCaricare" : true};
-matchs['TMCL-3'] = {"id":"1730475", "lega":"TMCL", "giornata":3, "data":"01/03/2025", "daCaricare" : true};
+matchs['TMCL-3'] = {"id":"1745321", "lega":"TMCL", "giornata":3, "data":"01/03/2025", "daCaricare" : true};
 matchs['TMCL-4'] = {"id":"", "lega":"TMCL", "giornata":4, "data":"", "daCaricare" : true};  
 matchs['TMCL-5'] = {"id":"", "lega":"TMCL", "giornata":5, "data":"", "daCaricare" : true};
 matchs['TMCL-6'] = {"id":"", "lega":"TMCL", "giornata":6, "data":"", "daCaricare" : true};
