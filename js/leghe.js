@@ -15,12 +15,13 @@ matchs['1WL-PEACE-7'] = {"id":"", "lega":"1WL-PEACE", "giornata":1, "data":"", "
 
 //1WL 2025 European Qualifiers 15+	1WL-EUROPEAN
 matchs['1WL-EUROPEAN-1'] = {"id":"1704697", "lega":"1WL-EUROPEAN", "giornata":1, "data":"01/12/2024", "daCaricare" : true};
-matchs['1WL-EUROPEAN-2'] = {"id":"1729699", "lega":"1WL-EUROPEAN", "giornata":2, "data":"02/02/2025", "daCaricare" : true};
-matchs['1WL-EUROPEAN-3'] = {"id":"1743587", "lega":"1WL-EUROPEAN", "giornata":3, "data":"02/03/2025", "daCaricare" : true};
-matchs['1WL-EUROPEAN-4'] = {"id":"1760863", "lega":"1WL-EUROPEAN", "giornata":4, "data":"06/04/2025", "daCaricare" : true};
-matchs['1WL-EUROPEAN-5'] = {"id":"", "lega":"1WL-EUROPEAN", "giornata":1, "data":"", "daCaricare" : true};
+matchs['1WL-EUROPEAN-2'] = {"id":"", "lega":"1WL-EUROPEAN", "giornata":2, "data":"", "daCaricare" : true};
+matchs['1WL-EUROPEAN-3'] = {"id":"1729699", "lega":"1WL-EUROPEAN", "giornata":3, "data":"02/02/2025", "daCaricare" : true};
+matchs['1WL-EUROPEAN-4'] = {"id":"1743587", "lega":"1WL-EUROPEAN", "giornata":4, "data":"02/03/2025", "daCaricare" : true};
+matchs['1WL-EUROPEAN-5'] = {"id":"1760863", "lega":"1WL-EUROPEAN", "giornata":5, "data":"06/04/2025", "daCaricare" : true};
 matchs['1WL-EUROPEAN-6'] = {"id":"", "lega":"1WL-EUROPEAN", "giornata":1, "data":"", "daCaricare" : true};
 matchs['1WL-EUROPEAN-7'] = {"id":"", "lega":"1WL-EUROPEAN", "giornata":1, "data":"", "daCaricare" : true};
+matchs['1WL-EUROPEAN-8'] = {"id":"", "lega":"1WL-EUROPEAN", "giornata":1, "data":"", "daCaricare" : true};
 
 //1WL 2025 Classic OPEN	1WL-OPEN
 matchs['1WL-OPEN-1'] = {"id":"1720631", "lega":"1WL-OPEN", "giornata":1, "data":"12/01/2025", "daCaricare" : true};
